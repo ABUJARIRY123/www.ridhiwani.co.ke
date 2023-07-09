@@ -1,5 +1,5 @@
 body {
-    background-color: azure;
+    background-color: white;
     text-align: left;
 }
 h1 {
@@ -20,12 +20,45 @@ mark {
 background-color: blueviolet;
 
 }
-a {
-    color: chartreuse;
-}
+a:link{
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
 
+}
+a:visited{
+color: pink;
+background-color: transparent;
+text-decoration: none;
+}
+a:hover{
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:active{
+    color: yellow;
+    background-color: transparent;
+    text-decoration: underline;
+}
 p {
     border: 3px solid powderblue;
     padding: 25px;
     margin: 50px;
+}
+a:link, a:visited {
+background-color: #f44336;
+color: white;
+padding: 15px 10px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+}
+a:hover, a:active{
+    background-color: red;
+}
+div {
+    background-color: blue;
+    color: white;
+    
 }
