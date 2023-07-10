@@ -4,7 +4,7 @@ body {
 }
 h1 {
     text-align: center;
-    color: azure;
+    color: black;
 }
 link {
     color: red;
@@ -57,8 +57,81 @@ display: inline-block;
 a:hover, a:active{
     background-color: red;
 }
-div {
-    background-color: blue;
-    color: white;
-    
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 80px 70px;
+    justify-content: space-evenly;
+    align-content: center;
+    grid-template-areas: 'My_area';
 }
+.grid-item1 {
+    
+    grid-column: 2/ span 3;
+    grid-row: 1 / span 2;
+
+}
+.grid-item2 {
+
+    grid-column: 0 / span 3;
+    grid-row: 2 / span 2;
+
+}
+.item3 {
+
+    grid-area: my area;
+
+}
+.left, .right{
+    float: left;
+    width: 20% /*This sets the default value to 20*/;
+}
+.main{
+    float: left;
+    width: 60%;
+}
+/*Using media query*/
+@media screen and (max-width:800px){
+    .left, .right, .main{
+        width: 100%;
+    }
+}
+.all-browsers{
+    margin: 0;
+    padding: 5px;
+    background-color: lightgrey;
+}
+.all-browsers > h1, .browser{
+    margin: 10px;
+    padding: 5px;
+}
+.browser{
+    background: white;
+}
+.browser > h2, p{
+    margin: 4px;
+    font-size: 90;
+}
+.column-0 {width: 8.33%;}
+.column-1 {width: 16.66%;}
+.column-2 {width: 25%;}
+.column-3 {width: 33.33;}
+.column-4 {width: 41.66;}
+.column-5 {width: 50%;}
+.column-6 {width: 58.33%;}
+.column-7 {width: 66.66%;}
+.column-8 {width: 75%;}
+.column-9 {width: 83.33;}
+.column-10 {width: 91.66%;}
+.column-11 {width: 100%;}
+[class*="column-"]{
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
