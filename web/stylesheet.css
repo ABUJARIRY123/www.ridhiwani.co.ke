@@ -135,3 +135,21 @@ a:hover, a:active{
     display: table;
 }
 
+.flex-container {
+    display: flex;
+    /* Create a flex container */
+    justify-content: space-between;
+    /* Distribute items along the main axis */
+    align-items: center;
+    /* Align items along the cross axis */
+    height: 200px;
+    /* Set a fixed height for the container */
+    background-color: #f0f0f0;
+}
+
+.flex-item {
+    flex: 1;
+    /* Expand to take available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+}
